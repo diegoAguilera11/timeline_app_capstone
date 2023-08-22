@@ -1,8 +1,9 @@
-'use client'
-import { Navbar } from './components/Navbar'
-import './styles/globals.css'
-import { Inter } from 'next/font/google'
-import { AuthContextProvider } from './context/auth/AuthContext'
+'use client';
+import Navbar from '../components/Navbar'
+import '../styles/globals.css'
+import { AuthContextProvider } from '../contexts/auth/AuthContext'
+
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ['latin'] })
 

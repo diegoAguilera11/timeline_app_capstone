@@ -1,6 +1,5 @@
-'use client';
 import useEventDataFetching from '../hooks/useEventDataFetch';
-import { AuthContext } from '../context/auth/AuthContext'
+import { AuthContext } from '../contexts/auth/AuthContext'
 import { useContext } from 'react';
 
 const EventList = () => {

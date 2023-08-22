@@ -2,8 +2,8 @@
 import React, { useContext } from 'react';
 import { useRouter} from 'next/navigation'
 
-import { AuthContext } from '../context/auth/AuthContext';
-import Login from '../components/Login';
+import { AuthContext } from '../../contexts/auth/AuthContext';
+import Login from '../../components/Login';
 
 
 const LoginPage = () => {
