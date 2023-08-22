@@ -1,0 +1,13 @@
+{
+  "rules": {
+    ".read": "ture",
+    ".write": "auth != null",
+    "events": {
+      ".read": "true",
+      ".write": "auth != null",
+      "$event_id": {
+        ".validate": "newData.child('name').isString() && newData.child('date').isString()"
+      }
+    }
+  }
+}
