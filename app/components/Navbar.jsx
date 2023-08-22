@@ -3,26 +3,8 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../context/auth/AuthContext'
 
 export const Navbar = () => {
-    const {user, googleSignIn, logOut} = useContext(AuthContext);
-
-    const handleSignIn = async () => {
-        try {
-            await googleSignIn();
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-    const handleSignOut = async () => {
-        try {
-            await logOut();
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
+    const {user, logOut} = useContext(AuthContext);
     console.log(user);
-
 
     return (
         <div className='h-20 w-full bg-cyan-600 border-b-2-cyan-700
@@ -43,26 +25,27 @@ export const Navbar = () => {
                 <li className='p-2 cursor-pointer'>
                     <Link href='/profile'>Profile</Link>
                 </li>
+                
+                <li className='p-2 cursor-pointer'>
+                    <Link href='/about'>About</Link>
+                </li>
             </ul>
          )}
-
             {(!user) ? (
             <ul className='flex'>
                 <li
-                    onClick={handleSignIn} 
                     className='p-2 cursor-pointer'>
-                    Login
+                    <Link href='/login'>Login</Link>
                 </li>
-
                 <li className='p-2 cursor-pointer'>
-                    Sign up
+                    <Link href='/login'>Sign up</Link>
                 </li>
             </ul>
 
             ): (
                 <ul className='flex'>
                 <li
-                    onClick={handleSignOut} 
+                    onClick={logOut} 
                     className='p-2 cursor-pointer'>
                     Sign out
                 </li>
